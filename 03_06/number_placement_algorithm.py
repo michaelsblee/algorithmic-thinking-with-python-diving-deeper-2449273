@@ -28,7 +28,16 @@ solution_values = []
 # Your code goes here
 # Iterate through the inequalities and apply solution algorithm to populate solution_values
 # You may need to add the last value outside the loop
-pass
+for i in puzzle_symbols:
+    if i == ">":
+        solution_values.append(sorted_puzzle_nums[high])
+        high += 1
+        print(solution_values)
+    else:
+        solution_values.append(sorted_puzzle_nums[low])
+        low -= 1
+        print(solution_values)
+solution_values.append(sorted_puzzle_nums[high])
 
 # Convert solution_values to list of strings
 solution_values = list(map(str, solution_values))
