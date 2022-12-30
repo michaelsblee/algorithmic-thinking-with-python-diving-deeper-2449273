@@ -1,6 +1,18 @@
 def ransom_note(magazine, note):
-    pass
+    count_table = {}
 
+    for word in magazine:
+        if word not in count_table:
+            count_table[word] = 1
+        else:
+            count_table[word] += 1
+
+    for word in note:
+        if word not in count_table or count_table[word] == 0: 
+            return False
+        else:
+            count_table[word] -= 1
+    return True
 
 magazine = "give me one grand today night".split()
 note = "give one grand today".split()

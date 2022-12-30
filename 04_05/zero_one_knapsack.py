@@ -21,10 +21,10 @@ def knapsack(max_capacity, weights, values):
     # Display results table
     print(tabulate(results_table, tablefmt="pretty"))
 
-    # for row in results_table:
-    #     for el in row:
-    #         print(el, end=",")
-    #     print()
+    for row in results_table:
+        for el in row:
+            print(el, end=",")
+        print()
 
     return results_table[num_items][max_capacity]
 
